@@ -1,0 +1,12 @@
+{% if questions %}
+	<ul>
+		{% for q in questions %}
+			<li>
+				<a href="{%url 'quiz:ques' q.id %}">{{ q.id }} </a>
+			</li>
+		{% endfor %}
+	</ul>
+
+{% else %}
+	<p>Sorry , No data available.</p>
+{% endif %}
